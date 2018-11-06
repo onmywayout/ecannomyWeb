@@ -109,7 +109,7 @@ html {
 
 .font-white{ color: #fff; }
 
-.main-area{ position: relative; height: 100vh; background: #0C0D0F; color: #fff; }
+.main-area{ position: relative; height: 100vh; background: #000000; color: #fff; }
 
 
 /* ---------------------------------
@@ -136,9 +136,9 @@ html {
 
 .right-section{ float: right; width: 50%; position: relative; padding: 0 60px; }
 
-.right-section .logo{ position: absolute; top: 40px; height: 30px; }
+.right-section .logo{ position: absolute; top: 40px;  height: 95px; overflow: hidden;}
 
-.right-section .logo img{ height: 100%; width: auto; } 
+.right-section .logo img{ height: auto;  width: 250px; } 
 
 
 .right-section .main-content{ padding: 40px 40px 40px 0; }
@@ -147,7 +147,7 @@ html {
 
 .main-content .desc{ color: #eee; }
 
-.main-content .email-input-area{ margin: 40px 0 20px; position: relative; width: 400px; height: 47px; }
+.main-content .email-input-area{ margin: 40px 0 20px; position: relative;  height: 47px; }
 
 .main-content .email-input-area .email-input{ width: 100%; position: absolute; top: 0; bottom: 0; left: 0; 
 	border-radius: 2px; border: 0; outline: 0; padding: 0 140px 0 25px; transition: all .2s; background: #F1F2F3; 

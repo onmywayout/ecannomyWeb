@@ -2,12 +2,15 @@
 
 /* Screens Resolution : 992px
 -------------------------------------------------------------------------- */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1500px) {
 	
 	/* ---------------------------------
 	4. RIGHT SECTION
 	--------------------------------- */
-
+	.right-section
+	{
+		background-size: unset;
+	}
 	.date-countdown{ width: 100%; }
 	
 }
@@ -73,13 +76,25 @@
 
 /* Screens Resolution : 479px
 -------------------------------------------------------------------------- */
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 1023px) {
 
 	/* ---------------------------------
 	1. PRIMARY STYLES
 	--------------------------------- */
 
 	body{ font-size: 13px; }
+
+
+	.left-section
+	{
+		visibility: hidden;
+		height: 0px;
+	}
+
+	.right-section
+	{
+		float: none;
+	}
 	
 
 	/* ---------------------------------

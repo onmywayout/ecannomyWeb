@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>ecannomy</title>
+	<title>TITLE</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
@@ -22,7 +22,7 @@
 	<link href="04-comming-soon/css/responsive.css" rel="stylesheet">
 	<style type="text/css">
 		.botonHundir {
-		    margin: 28px auto;
+		    margin: 28px;
 		    color: white;
 		    background: black;
 		    border: none;
@@ -32,27 +32,6 @@
 		    padding: 15px;
 		    border-radius: 30px;
 		    font-size: 14px;
-		}
-		.item
-		{
-			 
-			 display: inline-block;
-			 width: 32%;
-			 text-align: center;
-		}
-		.itemRow
-		{
-			width: 100%;
-		}
-		.botonHundido
-		{
-			background-color: #4a7b4c;
-		}
-
-		.right-section
-		{
-			 background-image: url(images/countdown-4-1000x1000.jpg); background-size: cover;  background-position-x: 120px;
-		}
 	</style>
 </head>
 <body>
@@ -68,7 +47,7 @@
 		<section class="right-section full-height">
 				
 			<div>
-				<div style="position: absolute;font-size: 55px;display: inline-block;" class="logo" href="#"><img src="images/logo.jpg"></div>
+				<div style="position: absolute;font-size: 55px;display: inline-block;" class="logo" href="#">e<div style="color:#4caf50;display: inline-block;">cann</div>omy</div>
 				
 			</div>
 			
@@ -77,23 +56,16 @@
 					<div class="main-content">
 						<h1 class="title"><b>Salimos Pronto</b></h1>
 						<p class="desc">Estamos creando algo que cambiará tu manera de pensar. Esperanos</p>
-						
-						<div class="itemRow">
-							<div class="item">
-								<input type="button" onclick="presionarBoton(this)" value="vendedor" id="vendedor" style="margin-left: 0px;" class="botonHundir"> 
-							</div>
-							<div class="item">
-		    					<input type="button" onclick="presionarBoton(this)" value="comprador" id="comprador" class="botonHundir">
-	    					</div>
-	    					<div class="item">
-	    						<input type="button" onclick="presionarBoton(this)" value="interesado" id="interesado" class="botonHundir">
-    						</div>
+						<div>
+							
+						<input type="button" value="vendedor" style="
+    margin-left: 0px;" class="botonHundir"> <input type="button" value="comprador" class="botonHundir"><input type="button" value="interesado" class="botonHundir">
 						</div>
-						<input style="height: 48px;min-width: 280px;margin-top: 0;width: 100%;" class="email-input" name="email2" type="text" placeholder=" email" required/>
+						<input style="height: 48px;width: 280px;margin-top: 0;" class="email-input" name="email2" type="text" placeholder="     email"/>
 						<div class="email-input-area">
 							<form method="post">
 								
-								<input class="email-input" name="phone" type="text" placeholder="Teléfono" required />
+								<input class="email-input" name="phone" type="text" placeholder="Teléfono"/>
 								<button class="submit-btn" name="submit" type="submit"><b>Notificame</b></button>
 							</form>
 						</div><!-- email-input-area -->
@@ -125,20 +97,6 @@
 	<script src="common-js/jquery.countdown.min.js"></script>
 	
 	<script src="common-js/scripts.js"></script>
-
-
-	<script type="text/javascript">
-		
-		var seleccionado = "";
-
-		function presionarBoton(element)
-		{
-			element.classList.toggle("botonHundido");
-			seleccionado+= element.id + ";";
-			console.log(seleccionado);
-			//document.getElementById(botonId).classList.toggle("botonHundido");
-		}
-	</script>
 	
 </body>
 </html>
