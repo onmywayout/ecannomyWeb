@@ -140,3 +140,8 @@
 	
 	
 }
+
+@media only screen and (max-height: 580px)
+{
+	.right-section .main-content{ padding: 90px 40px 40px 0; }
+}
