@@ -128,7 +128,10 @@
 -------------------------------------------------------------------------- */
 @media only screen and (max-width: 359px) {
 	
-	
+	.item input
+	{
+		font-size: 12px;
+	}
 }
 
 /* Screens Resolution : 290px
@@ -136,4 +139,9 @@
 @media only screen and (max-width: 290px) {
 	
 	
+}
+
+@media only screen and (max-height: 580px)
+{
+	.right-section .main-content{ padding: 90px 40px 40px 0; }
 }
