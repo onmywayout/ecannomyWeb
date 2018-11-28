@@ -5,7 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
-	
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	
 	<!-- Font -->
 	
@@ -53,6 +54,16 @@
 		{
 			 
 		}
+
+		.slogan
+		{
+			position: absolute;font-size: 25px;display: inline-block;
+			    position: absolute;
+			    top: 90px;
+		        left: 60px;	
+			    /*height: 95px;*/
+			    overflow: hidden;
+		}
 	</style>
 </head>
 <body>
@@ -69,42 +80,42 @@
 				
 			<div>
 				<div style="position: absolute;font-size: 55px;display: inline-block;" class="logo" href="#"><img src="images/logo.png"></div>
-				
+				<div style="" class="slogan">el marketplace del cannabis medicinal</div>
 			</div>
 			
 			<div class="display-table">
 				<div class="display-table-cell">
 					<div class="main-content">
-						<h1 class="title"><b>Salimos Pronto</b></h1>
-						<p class="desc">Estamos creando algo que cambiará tu manera de pensar. Espéranos</p>
+						<h1 class="title"><b>salimos pronto</b></h1>
+						<p class="desc"> selecciona el sector que mejor te describa</p>
 						
 						<div class="itemRow">
 							<div class="item">
-								<input type="button" onclick="presionarBoton(this)" value="cultivador" id="cultivador" style="margin-left: 0px;" class="botonHundir"> 
+								<input type="button" onclick="presionarBoton(this)" value="  cultivo  " name="cultivo" id="cultivo" style="margin-left: 0px;" class="botonHundir"> 
 							</div>
 							<div class="item">
-		    					<input type="button" onclick="presionarBoton(this)" value="fabricante" id="fabricante" class="botonHundir">
+		    					<input type="button" onclick="presionarBoton(this)" value="extracto" name="extracto" id="extracto" class="botonHundir">
 	    					</div>
 	    					<div class="item">
-	    						<input type="button" onclick="presionarBoton(this)" value="interesado" id="interesado" class="botonHundir">
+	    						<input type="button" onclick="presionarBoton(this)" value="inversion" name="inversion" id="inversion" class="botonHundir">
     						</div>
 						</div>
-						<input style="height: 48px;min-width: 280px;margin-top: 0;width: 100%;" class="email-input" name="email2" type="text" placeholder=" email" required/>
-						<div class="email-input-area">
-							<form method="post">
+							<form method="post" onclick="" onsubmit="enviarForm();return false">
+								<input style="height: 48px;min-width: 280px;margin-top: 0;width: 100%;" class="email-input" id="email" type="text" placeholder="email" required/>
+								<div class="email-input-area">
 								
-								<input class="email-input" name="phone" type="text" placeholder="Teléfono" required />
-								<button class="submit-btn" name="submit" type="submit"><b>Notificame</b></button>
+								<input class="email-input" id="telefono" type="text" placeholder="teléfono" required />
+								<input class="submit-btn" id="submit" type="submit" value="Notificame" />
 							</form>
 						</div><!-- email-input-area -->
 						
-						<p class="post-desc">Déjanos tu correo y serás el primero en ver lo que hemos preparado</p>
+						<p class="post-desc">déjanos tu correo y serás el primero en ver lo que hemos preparado</p>
 					</div><!-- main-content -->
 				</div><!-- display-table-cell -->
 			</div><!-- display-table -->
 			
 			<ul class="footer-icons">
-				<li>Siguenos : </li>
+				<li><s></s>síguenos : </li>
 				<li><a href="https://www.facebook.com/Ecannomy-709480082757299/?modal=admin_todo_tour"><i class="ion-social-facebook" style="color: white;"></i></a></li>
 				<li><a href="#"><i class="ion-social-twitter" style="
     color: white;"></i></a></li>
@@ -137,6 +148,55 @@
 			seleccionado+= element.id + ";";
 			console.log(seleccionado);
 			//document.getElementById(botonId).classList.toggle("botonHundido");
+		}
+
+
+
+		/**
+		 * Enviar formulario de contacto y mostrar respuesta
+		 */
+		function enviarForm()
+		{
+
+		   
+		        var telefono = document.getElementById("telefono").value;
+		            email = document.getElementById("email").value,
+		            sel = seleccionado;
+
+		            if (!email) //la función se llama sola al cargar la página con campos vacios
+		                return;
+
+		        $.ajax({
+		            type: "POST",
+		            url: 'https://o6ur6ye60l.execute-api.us-east-1.amazonaws.com/prod/processContactFormRequest',
+		            contentType: 'application/json',
+		            data: JSON.stringify({
+		                'seleccionado': sel,
+		                'telefono': telefono,
+		                'email': email,
+		            }),
+		            success: function(res)
+		            {
+		                alert("Sus datos han sido enviados correctamente");
+		            },
+		            error: function(res)
+		            {
+		                alert("Lo lamentamos mucho. Ha ocurrido un error");
+		                console.log(res);
+		            }
+		        });
+		        return;
+
+		}
+
+		/**
+		 * Vuelve a habilitar el form para que se pueda enviar otro mensaje despues del primero
+		 */
+		function mostrarForm()
+		{
+		    $("#formulario").removeClass("ocultar");
+		    $("#respuesta").addClass("ocultar");
+		    return;
 		}
 	</script>
 	
