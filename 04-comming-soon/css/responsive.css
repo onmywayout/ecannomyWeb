@@ -104,7 +104,14 @@
 	}
 	.right-section .logo
 	{
+    	left: 28px;
 		top:0px;
+	}
+
+	.right-section .slogan
+	{
+		top: 52px;
+		left: 36px;
 	}
 
 	/* ---------------------------------
