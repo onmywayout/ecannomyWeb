@@ -139,6 +139,29 @@
 	{
 		font-size: 12px;
 	}
+
+	.right-section .slogan
+	{
+		font-size: 15px;
+		left: 32px;
+		font-style: italic;
+	}
+
+	.item input
+	{
+		font-size: 12px;
+	}
+
+	.main-content .title
+	{
+		  margin-top: -50px;
+		  margin-bottom: 4px;
+	}
+	.main-content .email-input-area 
+	{
+	   margin-top: 15px;
+	}
+
 }
 
 /* Screens Resolution : 290px
