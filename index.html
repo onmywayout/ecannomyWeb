@@ -22,7 +22,7 @@
 	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500" rel="stylesheet">
 	
-	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 	<link href="common-css/ionicons.css" rel="stylesheet">
 	
 	
@@ -43,6 +43,7 @@
 		    padding: 15px;
 		    border-radius: 30px;
 		    font-size: 14px;
+		    width: 90%;
 		}
 		.item
 		{
@@ -70,10 +71,59 @@
 			position: absolute;font-size: 25px;display: inline-block;
 			    position: absolute;
 			    top: 90px;
-		        left: 60px;	
+		        right: 100px;	
 			    /*height: 95px;*/
-			    overflow: hidden;
+			    /*overflow: hidden;*/
+			    text-align: right;
 		}
+		.title.titleVerde
+		{
+			color: #13986b;
+			margin-bottom: -10px;
+		}
+
+		.siguenos
+		{
+			    position: absolute;
+			    left: 60px;
+			    bottom: 140px;
+			    color: #999;
+			    font-size: 16pt;
+		}
+
+		.siguenosPequeno
+		{
+			visibility: hidden;
+		}
+
+		textarea, input 
+		{
+		  padding:10px;
+			font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+		    font-style: normal;
+		    font-weight: normal;
+		    text-decoration: inherit;
+		    font-size: 18pt;
+		}
+
+		input[type="submit"]
+		{
+			width: 60%;
+			text-align: center;
+			font-size: .9em;
+			/* outline: 0; */
+			border-radius: 6px;
+			transition: all .3s;
+			background: #0C7A4E;
+			color: #fff;
+			position: relative;
+			margin-top: 50px;
+			left: 20%;
+			border: #119A63;
+			border-width: 2px;
+			border-style: solid;
+		}
+
 		/*Corregir el styling raro que hace mac y ios de la página*/
 		textarea,
 		input.text,
@@ -91,7 +141,21 @@
 	<div class="main-area">
 		
 		<section class="left-section" style="background-image: url(images/countdown-4-1000x1000.jpg)">
-		
+			
+				<div class="siguenos">
+					
+						<ul class="footer-icons">
+							<li><s></s>Síguenos : </li>
+							<li><a href="https://www.facebook.com/Ecannomy-709480082757299/?modal=admin_todo_tour"><i class="ion-social-facebook" style="color: white;"></i></a></li>
+							<li><a href="#"><i class="ion-social-twitter" style="
+			    color: white;"></i></a></li>
+							<li><a href="instagram.com/ecannomy"><i class="ion-social-instagram-outline" style="
+			    color: white;"></i></a></li>
+							<li><a href="https://www.youtube.com/channel/UCJqMXgn8qbL8I7vnuRPD9jg?view_as=subscriber"><i class="ion-social-youtube" style="
+			    color: white;"></i></a></li>
+						</ul>
+				</div>
+
 			
 		</section><!-- left-section -->
 		
@@ -99,15 +163,24 @@
 		<section class="right-section full-height">
 				
 			<div>
-				<div style="position: absolute;font-size: 55px;display: inline-block;" class="logo" href="#"><img src="images/logo.png"></div>
+				<div class="logo" href="#"><img src="images/logo.png"></div>
 				<div style="" class="slogan">el marketplace del cannabis medicinal</div>
 			</div>
 			
 			<div class="display-table">
 				<div class="display-table-cell">
 					<div class="main-content">
-						<h1 class="title"><b>salimos pronto</b></h1>
-						<p class="desc"> selecciona el sector que mejor te describa</p>
+						<h4 class="title titleVerde"><b>Déjanos tus datos y</b></h4>
+						<h4 class="title"><b>prepárate para nuestro lanzamiento</b></h4>
+								<!-- Lita de iconos de font awesome https://fontawesome.com/cheatsheet?from=io -->
+							<form method="post" onclick="" onsubmit="enviarForm();return false">
+								<input style="height: 48px;min-width: 280px;margin-top: 0;width: 100%;" class="email-input" id="email" type="text" placeholder="&#xf0e0; email" required/>
+								<div class="email-input-area">
+								<input class="email-input" id="telefono" type="text" placeholder=" &#xf10b;  teléfono" required />
+								
+								</div><!-- email-input-area -->
+						
+						<p class="post-desc">Indica el sector que mejor te describa</p>
 						
 						<div class="itemRow">
 							<div class="item">
@@ -120,30 +193,35 @@
 	    						<input type="button" onclick="presionarBoton(this)" value="inversion" name="inversion" id="inversion" class="botonHundir">
     						</div>
 						</div>
-							<form method="post" onclick="" onsubmit="enviarForm();return false">
-								<input style="height: 48px;min-width: 280px;margin-top: 0;width: 100%;" class="email-input" id="email" type="text" placeholder="email" required/>
-								<div class="email-input-area">
-								
-								<input class="email-input" id="telefono" type="text" placeholder="teléfono" required />
-								<input class="submit-btn" id="submit" type="submit" value="Notificame" />
+						<div class="itemRow">
+							<input class="submit-btn" class="botonSubmit" id="submit" type="submit" value="Notificame" />
+						</div>
+
+
+						<div class="itemRow">
+								<div class="siguenos siguenosPequeno">
+									
+										<ul class="footer-icons">
+											<li><s></s>Síguenos : </li>
+											<li><a href="https://www.facebook.com/Ecannomy-709480082757299/?modal=admin_todo_tour"><i class="ion-social-facebook" style="color: white;"></i></a></li>
+											<li><a href="#"><i class="ion-social-twitter" style="
+							    color: white;"></i></a></li>
+											<li><a href="instagram.com/ecannomy"><i class="ion-social-instagram-outline" style="
+							    color: white;"></i></a></li>
+											<li><a href="https://www.youtube.com/channel/UCJqMXgn8qbL8I7vnuRPD9jg?view_as=subscriber"><i class="ion-social-youtube" style="
+							    color: white;"></i></a></li>
+										</ul>
+								</div>
+								</div>
 							</form>
-						</div><!-- email-input-area -->
-						
-						<p class="post-desc">déjanos tu correo y serás el primero en ver lo que hemos preparado</p>
 					</div><!-- main-content -->
 				</div><!-- display-table-cell -->
 			</div><!-- display-table -->
 			
-			<ul class="footer-icons">
-				<li><s></s>síguenos : </li>
-				<li><a href="https://www.facebook.com/Ecannomy-709480082757299/?modal=admin_todo_tour"><i class="ion-social-facebook" style="color: white;"></i></a></li>
-				<li><a href="#"><i class="ion-social-twitter" style="
-    color: white;"></i></a></li>
-				<li><a href="instagram.com/ecannomy"><i class="ion-social-instagram-outline" style="
-    color: white;"></i></a></li>
-				<li><a href="https://www.youtube.com/channel/UCJqMXgn8qbL8I7vnuRPD9jg?view_as=subscriber"><i class="ion-social-youtube" style="
-    color: white;"></i></a></li>
-			</ul>
+
+
+
+		
 		
 		</section><!-- right-section -->
 		
