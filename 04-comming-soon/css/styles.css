@@ -116,7 +116,7 @@ html {
 3. LEFT SECTION
 --------------------------------- */
 
-.left-section{ position: absolute; top: 0; bottom: 0; left: 0; width: 50%; background-size: cover; }
+.left-section{ position: absolute; top: 0; bottom: 0; left: 0; width: 55%; background-size: cover; }
 
 
 #normal-countdown{ text-align: center; }
@@ -134,16 +134,19 @@ html {
 4. RIGHT SECTION
 --------------------------------- */
 
-.right-section{ float: right; width: 50%; position: relative; padding: 0 60px; min-height: 550px }
+.right-section{ float: right; width: 45%; position: relative; padding: 0 60px; min-height: 550px }
 
-.right-section .logo{ position: absolute; top: 40px; left: 57px;  height: 95px; overflow: hidden;}
+.right-section .logo{ height: 95px;
+    text-align: right;
+    margin-right: 34px;
+    margin-top: 40px; }
 
 .right-section .logo img{ height: auto;  width: 250px; } 
 
 
 .right-section .main-content{ padding: 40px 40px 40px 0; }
 
-.main-content .title{ margin-bottom: 15px; }
+.main-content .title{ margin-bottom: 15px; text-align: right;font-size: 24pt;}
 
 .main-content .desc{ color: #eee; }
 
@@ -163,10 +166,10 @@ html {
 .main-content .email-input-area .submit-btn:hover{ background: #4a7b4c; }
 
 
-.main-content .post-desc{ color: #999; }
+.main-content .post-desc{ color: #999;     text-align: right;    padding-top: 31px;}
 
 
-.right-section .footer-icons{ position: absolute; bottom: 50px;}
+/*.right-section .footer-icons{ position: absolute; bottom: 60px;}*/
 
 .right-section .footer-icons > li > a{ display: inline-block; font-size: 1.07em; padding: 0 0px; }
 
