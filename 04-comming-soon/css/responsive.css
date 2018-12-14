@@ -24,7 +24,7 @@
 	1. PRIMARY STYLES
 	--------------------------------- */
 	
-	.main-area{ position: relative; height: 200vh; }
+	.main-area{ position: relative; height: 200vh;     top: -40px;}
 
 
 	/* ---------------------------------
@@ -86,7 +86,7 @@
 	1. PRIMARY STYLES
 	--------------------------------- */
 
-	body{ font-size: 13px; }
+	body{ font-size: 13px; overflow: auto }
 
 
 	.left-section
@@ -118,7 +118,7 @@
 
 	.right-section .siguenosPequeno
 		{
-			visibility: visible;
+			display: block;
 			position: inherit; 
 			left: 0;
 			bottom: 0;

@@ -30,7 +30,8 @@ html{ font-size: 100%; height: 100%; width: 100%; overflow-x: hidden; margin: 0p
 
 body{ font-size: 16px; font-family: 'Open Sans', sans-serif; width: 100%; height: 100%; margin: 0; font-weight: 400;
 	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; word-wrap: break-word; overflow-x: hidden; 
-	color: #333; }
+	color: #333; 
+    background: #000000;}
 
 h1, h2, h3, h4, h5, h6, p, a, ul, span, li, img, inpot, button{ margin: 0; padding: 0; }
 
@@ -89,7 +90,7 @@ html {
 
 .center-text{ text-align: center; } 
 
-.display-table{ display: table; height: 100%; width: 100%; }
+.display-table{ display: table; height: calc(100% - 135px); width: 100%; }
 
 .display-table-cell{ display: table-cell; vertical-align: middle; }
 
