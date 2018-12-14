@@ -90,7 +90,7 @@ html {
 
 .center-text{ text-align: center; } 
 
-.display-table{ display: table; height: calc(100% - 135px); width: 100%; }
+.display-table{ display: table; width: 100%; }
 
 .display-table-cell{ display: table-cell; vertical-align: middle; }
 
@@ -140,7 +140,8 @@ html {
 .right-section .logo{ height: 95px;
     text-align: right;
     margin-right: 34px;
-    margin-top: 40px; }
+    margin-top: 40px;
+    margin-bottom: 50px; }
 
 .right-section .logo img{ height: auto;  width: 250px; } 
 
